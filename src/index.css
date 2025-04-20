@@ -1,0 +1,99 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme - improved */
+    --background: 0 0% 98%; /* #fafafa */
+    --foreground: 220 20% 20%; /* Richer text color */
+
+    --card: 210 15% 97%; /* Slightly cooler white */
+    --card-foreground: 220 20% 20%;
+
+    --popover: 210 15% 97%;
+    --popover-foreground: 220 20% 20%;
+
+    --primary: 162 50% 40%; /* Greenish primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 90%; /* Subtle secondary */
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 162 40% 92%; /* Light green accent */
+    --accent-foreground: 162 70% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 162 50% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 15% 97%;
+    --sidebar-foreground: 220 20% 20%;
+    --sidebar-primary: 220 20% 20%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 15% 92%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 162 50% 40%;
+    
+    /* JWT colors in light mode */
+    --jwt-header: #6A53EC;
+    --jwt-payload: #4492E5;
+    --jwt-signature: #FF9B7A;
+  }
+
+  .dark {
+    /* Dark theme - improved */
+    --background: 210 30% 8%; /* #0d1520 - easier on the eyes than pure black */
+    --foreground: 210 5% 95%; /* #f1f2f3 - not pure white for less eye strain */
+
+    --card: 200 25% 15%; /* #172631 - richer than previous dark color */
+    --card-foreground: 210 5% 95%;
+
+    --popover: 200 25% 15%;
+    --popover-foreground: 210 5% 95%;
+
+    --primary: 162 40% 38%; /* #3d9d7c - keeping the greenish primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 20% 25%; /* #243946 - deeper secondary */
+    --secondary-foreground: 210 5% 95%;
+
+    --muted: 200 25% 20%; /* More distinct muted background */
+    --muted-foreground: 210 5% 70%;
+
+    --accent: 162 40% 38%; /* Match primary for consistency */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 25% 25%;
+    --input: 200 25% 25%;
+    --ring: 162 40% 38%;
+
+    /* JWT colors in dark mode */
+    --jwt-header-dark: #9b8aff;
+    --jwt-payload-dark: #7eb6ff;
+    --jwt-signature-dark: #ffbb9d;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
